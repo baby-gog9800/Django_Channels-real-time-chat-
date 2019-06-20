@@ -1,0 +1,17 @@
+body{
+  background-color: crimson !important;
+  }
+#form-container{
+  background-color: yellow !important;
+  padding : 5%;
+}
+#input-password,#input-password-confirm{
+  border: 2px solid crimson !important;
+}
+
+#input-username{
+  border: 2px solid crimson !important;
+}
+#submit-form{
+  border: 2px solid crimson;
+}

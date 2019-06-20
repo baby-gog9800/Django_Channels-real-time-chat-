@@ -1,0 +1,35 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% block title %} SignUp-ChatRoom {% endblock %}
+{% block form %}
+    <h1>ChatRoom-SignUp</h1><br><br>
+    <form id='signup-form' class='form-horizontal' method="POST">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for='input-password' id='label-password'>Email: </label>
+        {{form.email}}
+      </div>
+      <div class="form-group">
+        <label for='intput-username' id='label-username'>Username: </label>
+        {{form.username}}
+      </div>
+      <div class="form-group">
+        <label for='input-password' id='label-password'>Password: </label>
+        {{form.password}}
+      </div>
+      <div class="form-group">
+      <label for='input-password-confirm' id='label-password-confirm'>Confirm Password: </label>
+      {{form.confirm_password}}
+      </div>
+      <div class="form-group">
+      <br><input class='btn btn-success' type="submit" id='submit-form' value="Signup">
+      </div>
+    </form>
+{% endblock %}
+{% block style %}
+<style media="screen">
+  #signup{
+    display:none;
+  }
+</style>
+{% endblock %}
